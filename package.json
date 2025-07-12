@@ -5,9 +5,11 @@
 		"ng": "ng",
 		"start": "ng serve",
 		"build": "ng build",
+		"build:gh-pages": "ng build --base-href \"/pokemon-lounge/\"",
 		"watch": "ng build --watch --configuration development",
 		"test": "ng test",
-		"deploy:gh-pages": "ng build --base-href \"/pokemon-lounge/\" && npx angular-cli-ghpages --dir=dist/pokemon-lounge/browser",
+		"deploy:gh-pages": "npm run build:gh-pages && npm run copy:gh-pages",
+		"copy:gh-pages": "rimraf docs && cpy dist/pokemon-lounge/browser/** docs --parents && echo > docs/.nojekyll",
 		"lint": "ng lint"
 	},
 	"prettier": {
@@ -42,6 +44,7 @@
 		"@types/jasmine": "~5.1.0",
 		"angular-cli-ghpages": "^2.0.3",
 		"angular-eslint": "20.1.1",
+		"cpy-cli": "^5.0.0",
 		"eslint": "^9.29.0",
 		"eslint-config-prettier": "^10.1.5",
 		"eslint-plugin-prettier": "^5.5.1",
@@ -52,6 +55,7 @@
 		"karma-jasmine": "~5.1.0",
 		"karma-jasmine-html-reporter": "~2.1.0",
 		"prettier": "^3.6.2",
+		"rimraf": "^6.0.1",
 		"typescript": "~5.8.2",
 		"typescript-eslint": "8.34.1"
 	}
