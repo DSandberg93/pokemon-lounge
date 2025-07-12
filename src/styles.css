@@ -1,13 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
-html, body {
-  margin: 0;
-  padding: 0;
+html,
+body {
+	margin: 0;
+	padding: 0;
 }
 
 body {
-  display: flex;
+	display: flex;
 }
 
 pl-root {
-  width: 100%;
+	width: 100%;
 }

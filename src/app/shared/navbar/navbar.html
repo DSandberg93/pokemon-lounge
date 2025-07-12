@@ -1,10 +1,14 @@
 <nav>
-  <div class="nav-left">
-    <a [routerLink]="links[0].route" routerLinkActive="active">{{ links[0].label }}</a>
-  </div>
-  <div class="nav-right">
-    @for (link of links.slice(1); track link.label) {
-      <a [routerLink]="link.route" routerLinkActive="active">{{ link.label }}</a>
-    }
-  </div>
+	<div class="nav-left">
+		<a [routerLink]="links[0].route" routerLinkActive="active">{{
+			links[0].label
+		}}</a>
+	</div>
+	<div class="nav-right">
+		@for (link of links.slice(1); track link.label) {
+			<a [routerLink]="link.route" routerLinkActive="active">{{
+				link.label
+			}}</a>
+		}
+	</div>
 </nav>
