@@ -5,7 +5,6 @@
 		"ng": "ng",
 		"start": "ng serve",
 		"build": "ng build",
-		"build:raspi": "ng build --base-href \"/pokemon-lounge/\" --output-path=/var/www/pokemon-lounge",
 		"build:gh-pages": "ng build --base-href \"/pokemon-lounge/\"",
 		"watch": "ng build --watch --configuration development",
 		"test": "ng test",
